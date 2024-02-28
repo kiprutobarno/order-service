@@ -12,6 +12,7 @@ import org.springframework.data.relational.core.mapping.Table;
 public record Order(
         @Id Long id,
         String isbn,
+        String name,
         Double price,
         Integer quantity,
         OrderStatus status,
@@ -19,7 +20,7 @@ public record Order(
         @LastModifiedDate Instant lastModifiedDate,
         @Version int version) {
     public static Order of(String isbn, String name, Double price, Integer quantity, OrderStatus status) {
-        return new Order(null, isbn, price, quantity, status, null, null, 0);
+        return new Order(null, isbn, name, price, quantity, status, null, null, 0);
     }
 
 }
