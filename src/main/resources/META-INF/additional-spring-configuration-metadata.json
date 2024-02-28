@@ -1,0 +1,9 @@
+{
+    "properties": [
+        {
+            "name": "bookshop.catalog-service-uri",
+            "type": "java.lang.String",
+            "description": "URI for the Catalog Service instance running in the local environment"
+        }
+    ]
+}
