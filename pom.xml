@@ -102,6 +102,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <image>
+                        <name>${project.artifactId}:latest</name>
+                        <env>
+                            <BP_JVM_VERSION>21.*</BP_JVM_VERSION>
+                        </env>
+                        <!-- use custom image timestamp, otherwise it will show 44 years ago  -->
+                        <createdDate>${maven.build.timestamp}</createdDate>
+                    </image>
+                </configuration>
             </plugin>
         </plugins>
     </build>
